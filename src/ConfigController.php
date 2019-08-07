@@ -103,6 +103,7 @@ class ConfigController
         $form->text('name')->rules('required');
         $form->textarea('value')->rules('required');
         $form->textarea('description');
+        $form->image('image')->move('images/config');
 
         $form->display('created_at');
         $form->display('updated_at');
