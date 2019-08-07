@@ -107,6 +107,13 @@ class ConfigController
         $form->display('created_at');
         $form->display('updated_at');
 
+        //保存前回调
+        $form->saving(function (Form $form) {
+            if ($form->model()->image) {
+                $form->model()->value = $form->model()->image;
+            }
+        });
+
         return $form;
     }
 }
