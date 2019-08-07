@@ -108,9 +108,9 @@ class ConfigController
         $form->display('updated_at');
 
         //保存前回调
-        $form->saving(function (Form $form) {
-            if ($form->image) {
-                $form->value = $form->image;
+        $form->saved(function (Form $form) {
+            if ($form->model()->image) {
+                ConfigModel::where('id', $form->model()->id)->update(['value' => $form->model()->imageUrl]);
             }
         });
 
