@@ -17,7 +17,7 @@ Inspired by https://github.com/laravel-backpack/settings.
 ## Installation
 
 ```
-$ composer require laravel-admin-ext/config
+$ composer require antto1/config
 
 $ php artisan migrate
 ```
@@ -45,7 +45,7 @@ class AppServiceProvider extends ServiceProvider
 }
 ```
 
-Then run: 
+Then run:
 
 ```
 $ php artisan admin:import config

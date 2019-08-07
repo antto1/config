@@ -1,14 +1,14 @@
 {
-    "name": "laravel-admin-ext/config",
+    "name": "antto1/config",
     "description": "Config extension for laravel-admin",
     "type": "library",
     "keywords": ["laravel-admin", "setting"],
-    "homepage": "https://github.com/laravel-admin-extensions/config",
+    "homepage": "https://github.com/antto1/config",
     "license": "MIT",
     "authors": [
         {
-            "name": "z-song",
-            "email": "zosong@126.com"
+            "name": "antto",
+            "email": "info@anttoweb.com"
         }
     ],
     "require": {
