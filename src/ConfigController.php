@@ -109,8 +109,8 @@ class ConfigController
 
         //保存前回调
         $form->saving(function (Form $form) {
-            if ($form->model()->image) {
-                $form->model()->value = $form->model()->image;
+            if ($form->image) {
+                $form->value = $form->image;
             }
         });
 
