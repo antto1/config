@@ -56,6 +56,7 @@ Open `http://your-host/admin/config`
 ## Usage
 
 After add config in the panel, use `config($key)` to get value you configured.
+`image`有值将会代替`value`值
 
 License
 ------------
