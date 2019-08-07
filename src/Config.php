@@ -14,7 +14,7 @@ class Config extends Extension
      */
     public static function load()
     {
-        foreach (ConfigModel::all(['name', 'value']) as $config) {
+        foreach (ConfigModel::all(['name', 'value', 'image']) as $config) {
             config([$config['name'] => $config['value']]);
         }
     }
