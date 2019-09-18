@@ -17,7 +17,7 @@ Inspired by https://github.com/laravel-backpack/settings.
 ## Installation
 
 ```
-$ composer require antto1/config
+$ composer require antto1/laravel-admin-ext-config
 
 $ php artisan migrate
 ```
