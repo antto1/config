@@ -21,8 +21,8 @@ class ConfigController
     public function index(Content $content)
     {
         return $content
-            ->header('Config')
-            ->description('list')
+            ->header('配置管理')
+            ->description('列表')
             ->body($this->grid());
     }
 
@@ -37,8 +37,8 @@ class ConfigController
     public function edit($id, Content $content)
     {
         return $content
-            ->header('Config')
-            ->description('edit')
+            ->header('配置管理')
+            ->description('修改')
             ->body($this->form()->edit($id));
     }
 
@@ -52,16 +52,16 @@ class ConfigController
     public function create(Content $content)
     {
         return $content
-            ->header('Config')
-            ->description('create')
+            ->header('配置管理')
+            ->description('新增')
             ->body($this->form());
     }
 
     public function show($id, Content $content)
     {
         return $content
-            ->header('Config')
-            ->description('detail')
+            ->header('配置管理')
+            ->description('详情')
             ->body(Admin::show(ConfigModel::findOrFail($id), function (Show $show) {
                 $show->id();
                 $show->name();
@@ -100,10 +100,10 @@ class ConfigController
         $form = new Form(new ConfigModel());
 
         $form->display('id', 'ID');
-        $form->text('name')->rules('required');
-        $form->textarea('value');
-        $form->image('image')->move('images/config');
-        $form->textarea('description');
+        $form->text('name', '属性名称')->rules('required');
+        $form->textarea('value', '属性值');
+        $form->image('image', '图片')->move('images/config');
+        $form->textarea('description', '描述');
         $form->display('created_at');
         $form->display('updated_at');
 
