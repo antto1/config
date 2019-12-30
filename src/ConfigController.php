@@ -102,7 +102,7 @@ class ConfigController
         $form->display('id', 'ID');
         $form->text('name', '属性名称')->rules('required');
         $form->textarea('value', '属性值');
-        $form->image('image', '图片')->move('images/config');
+        $form->image('image', '图片')->move('images/config')->removable()->uniqueName();
         $form->textarea('description', '描述');
         $form->display('created_at');
         $form->display('updated_at');
